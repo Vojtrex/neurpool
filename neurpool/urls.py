@@ -17,10 +17,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.http import JsonResponse
+from scraper.models import MyModel
 
 
 def index(request):
-    return JsonResponse('Neurpool', safe=False)
+
+    try:
+        models = MyModel.objects.all()
+    except MyModel.DoesNotExist as e:
+        print(e)
+
+
+    return JsonResponse(models.todict, safe=False)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
