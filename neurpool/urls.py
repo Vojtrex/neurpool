@@ -17,14 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.http import JsonResponse
-from scraper.models import MyModel
+from scraper.models import ScrapedData
 
 
 def index(request):
 
     try:
-        models = MyModel.objects.all()
-    except MyModel.DoesNotExist as e:
+        models = ScrapedData.objects.all()
+    except ScrapedData.DoesNotExist as e:
         print(e)
 
 

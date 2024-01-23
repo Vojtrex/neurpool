@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from datetime import datetime
-from .models import MyModel
+from .models import ScrapedData
 
 # Create your views here.
 
@@ -26,8 +26,6 @@ def scrape_url(request):
 
         timestamp = datetime.now()
 
-        MyModel.objects.create(percentage=percentage, count_pool=count_pool, count_aquapark=count_aquapark, timestamp=timestamp)
+        ScrapedData.objects.create(percentage=percentage, count_pool=count_pool, count_aquapark=count_aquapark, timestamp=timestamp)
 
     return HttpResponse(numbers)
-
-# print(page.text)
