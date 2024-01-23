@@ -15,9 +15,7 @@ def scrape_url(request):
 
     numbers = [strong.get_text(strip=True) for strong in soup.select('div.header-info strong')]
     print(numbers)
-
-    f = open('output.html','w', encoding="utf-8")
-    f.write(page.text)
+    
 
     return HttpResponse(numbers)
 
