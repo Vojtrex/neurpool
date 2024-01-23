@@ -1,0 +1,47 @@
+output.html
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local development settings
+*.env
+
+# Database
+db.sqlite3
+
+# Static files
+/static/
+
+# Media files
+/media/
+
+# Virtual environment
+venv/
+env/
+
+# Compiled Python files
+*.pyc
+
+# Log files
+*.log
+
+# Backup files
+*.bak
+
+# Django generated files
+*.secret_key
+*.db
+*.sqlite3
+
+# Ignore migrations for all apps
+**/migrations/
+
+# Ignore local settings
+local_settings.py
+
+# Ignore system files
+.DS_Store
+Thumbs.db
