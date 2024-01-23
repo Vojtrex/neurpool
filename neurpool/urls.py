@@ -22,16 +22,11 @@ from scraper.models import ScrapedData
 
 def index(request):
 
-    try:
-        models = ScrapedData.objects.all()
-    except ScrapedData.DoesNotExist as e:
-        print(e)
-
-
-    return JsonResponse(models.todict, safe=False)
+    return JsonResponse("Neurpool", safe=False)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
-    path('scrape', include('scraper.urls'))
+    path('scraper', include('scraper.urls')),
+    path('grapher/', include('grapher.urls')),
 ]

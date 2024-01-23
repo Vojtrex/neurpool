@@ -1,0 +1,36 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Neurpool{% endblock %}</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    {% load static %}
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>{% block header %}Neurpool{% endblock %}</h1>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; Neurpool</p>
+    </footer>
+</body>
+</html>

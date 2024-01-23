@@ -1,0 +1,10 @@
+<!-- grapher/templates/grapher/chart.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>Scraped Data Chart</h2>
+  <div style="width: 80%;">
+    {% render_chart chart %}
+  </div>
+{% endblock %}
