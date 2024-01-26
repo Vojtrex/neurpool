@@ -29,4 +29,5 @@ urlpatterns = [
     path('', index),
     path('scraper', include('scraper.urls')),
     path('grapher/', include('grapher.urls')),
+    path('tester/', include('tester.urls')),
 ]

@@ -1,6 +1,7 @@
 # grapher/views.py
 
 from django.shortcuts import render
+from django import template
 from chartjs.views.lines import BaseLineChartView
 from scraper.models import ScrapedData
 
